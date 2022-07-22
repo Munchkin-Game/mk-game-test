@@ -18,12 +18,12 @@ let codeDate = day + month;
 let scoreCount = 0;
 function flipCard() {
     scoreCount++;
-    document.getElementById("score__now").innerHTML = "Steps:" + Math.floor(scoreCount/2);
-    document.getElementById("score__result").innerHTML = "You steps:" + " " + Math.floor(scoreCount/2) + "Steps";
-    if (scoreCount/2 <= 6) {
+    document.getElementById("score__now").innerHTML = "Steps:" + Math.floor(scoreCount / 2);
+    document.getElementById("score__result").innerHTML = "You steps:" + " " + Math.floor(scoreCount / 2) + "Steps";
+    if (scoreCount / 2 <= 6) {
         document.getElementById("prize").innerHTML = "You have 20% discount";
         document.getElementById("benefit").innerHTML = randomOne() + "20" + randomString + codeDate;
-    } else if (scoreCount/2 > 6 && scoreCount/2 <= 10) {
+    } else if (scoreCount / 2 > 6 && scoreCount / 2 <= 10) {
         document.getElementById("prize").innerHTML = "You have 15% discount";
         document.getElementById("benefit").innerHTML = randomOne() + "15" + randomString + codeDate;
     } else {
@@ -36,9 +36,9 @@ function flipCard() {
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
-
         return;
     }
+
     hasFlippedCard = false;
     secondCard = this;
 
@@ -48,8 +48,8 @@ function flipCard() {
 function checkForMatching() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? (disableCards(), endGame()) : unflipCards();
-
 }
+
 let count = 0;
 function endGame() {
     count += 1;
@@ -86,7 +86,6 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 // POPUP
-
 let popup = document.getElementById('popup');
 let start = document.getElementById('start');
 

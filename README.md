@@ -1,2 +1,7 @@
-# mk-game-test
-The additional repository with the game code. (not a pity xD )
+## Репозиторий с основным кодом игры "Суши".
+
+Здесь находиться код игры "Суши". Данный репозиторий опубликован на GitHub Pages как сайт: 
+https://munchkin-game.github.io/mk-game-test/
+
+Ссылка на автора: 
+https://maxizhukov.github.io/telegram_game_front/
