@@ -18,17 +18,17 @@ let codeDate = day + month;
 let scoreCount = 0;
 function flipCard() {
     scoreCount++;
-    document.getElementById("score__now").innerHTML = "Steps:" + Math.floor(scoreCount / 2);
-    document.getElementById("score__result").innerHTML = "You steps:" + " " + Math.floor(scoreCount / 2) + "Steps";
+    document.getElementById("score__now").innerHTML = "Шаги:" + Math.floor(scoreCount / 2);
+    document.getElementById("score__result").innerHTML = "Ваши шаги:" + " " + Math.floor(scoreCount / 2) + "!";
     if (scoreCount / 2 <= 6) {
-        document.getElementById("prize").innerHTML = "You have 20% discount";
+        document.getElementById("prize").innerHTML = "У вас есть скидка 20%!";
         document.getElementById("benefit").innerHTML = randomOne() + "20" + randomString + codeDate;
     } else if (scoreCount / 2 > 6 && scoreCount / 2 <= 10) {
-        document.getElementById("prize").innerHTML = "You have 15% discount";
+        document.getElementById("prize").innerHTML = "У вас есть скидка 15%!";
         document.getElementById("benefit").innerHTML = randomOne() + "15" + randomString + codeDate;
     } else {
-        document.getElementById("prize").innerHTML = "You have 15% discount";
-        document.getElementById("benefit").innerHTML = randomOne() + "15" + randomString + codeDate;
+        document.getElementById("prize").innerHTML = "У вас есть скидка 10%!";
+        document.getElementById("benefit").innerHTML = randomOne() + "10" + randomString + codeDate;
     }
     if (lockBoard) return;
     if (this === firstCard) return;
